@@ -11,7 +11,7 @@ public class GameManager {
     }
 
     private static GameManager instance = new GameManager();
-    private GameMode gameMode { get; private set; }
+    public GameMode gameMode { get; private set; }
 
     private GameManager() {
         gameMode = GameMode.PLAYER;
@@ -22,11 +22,15 @@ public class GameManager {
         return instance;
     }
 
-    public ToggleGameMode()
+    public void ToggleGameMode()
     {
-        if(GameMode == GameMode.CAR)
+        if(gameMode == GameMode.CAR)
         {
             gameMode = GameMode.PLAYER;
+        }
+        else
+        {
+            gameMode = GameMode.CAR;
         }
     }
 }

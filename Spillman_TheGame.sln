@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spillman_TheGame.Plugins", "Spillman_TheGame.Plugins.csproj", "{38291480-F804-DCB9-6D5D-3C6A9625B48F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spillman_TheGame", "Spillman_TheGame.csproj", "{9271A958-9C7E-CFD0-F5C5-1BC65E17165A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spillman_TheGame.Editor.Plugins", "Spillman_TheGame.Editor.Plugins.csproj", "{F33180A9-DBC4-E87F-826B-350929A9CC74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38291480-F804-DCB9-6D5D-3C6A9625B48F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38291480-F804-DCB9-6D5D-3C6A9625B48F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38291480-F804-DCB9-6D5D-3C6A9625B48F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38291480-F804-DCB9-6D5D-3C6A9625B48F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9271A958-9C7E-CFD0-F5C5-1BC65E17165A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9271A958-9C7E-CFD0-F5C5-1BC65E17165A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9271A958-9C7E-CFD0-F5C5-1BC65E17165A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9271A958-9C7E-CFD0-F5C5-1BC65E17165A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F33180A9-DBC4-E87F-826B-350929A9CC74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F33180A9-DBC4-E87F-826B-350929A9CC74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F33180A9-DBC4-E87F-826B-350929A9CC74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F33180A9-DBC4-E87F-826B-350929A9CC74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
