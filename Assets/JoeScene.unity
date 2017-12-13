@@ -293,10 +293,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 0.5
   active: 0
+--- !u!1 &292271041 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+  m_PrefabInternal: {fileID: 1880705242}
 --- !u!4 &292271047 stripped
 Transform:
   m_PrefabParentObject: {fileID: 408730, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
   m_PrefabInternal: {fileID: 1880705242}
+--- !u!114 &292271048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 292271041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893b8c94aeb836e49a5adfbe923b0053, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &329045092
 GameObject:
   m_ObjectHideFlags: 0
@@ -1385,6 +1400,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1639778262}
+  - component: {fileID: 1639778263}
   m_Layer: 0
   m_Name: police_car_V1_LAPD
   m_TagString: PoliceCar
@@ -1400,7 +1416,7 @@ Transform:
   m_GameObject: {fileID: 1639778261}
   m_LocalRotation: {x: -0, y: -0.9990382, z: -0, w: -0.043849215}
   m_LocalPosition: {x: -0.163, y: 0, z: 2.356}
-  m_LocalScale: {x: 0.2913165, y: 0.29131547, z: 0.29131654}
+  m_LocalScale: {x: 0.29131794, y: 0.29131544, z: 0.29131797}
   m_Children:
   - {fileID: 1095854253}
   - {fileID: 1005289743}
@@ -1426,6 +1442,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -185.02599, z: 0}
+--- !u!114 &1639778263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1639778261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ededaafe25473744bfd6c9cdb8e23a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1652163648 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 131524, guid: 08fc12108a764e942a4c5ee3e77f08e9, type: 2}
@@ -1777,7 +1804,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 430872, guid: 08fc12108a764e942a4c5ee3e77f08e9, type: 2}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 430872, guid: 08fc12108a764e942a4c5ee3e77f08e9, type: 2}
       propertyPath: m_LocalScale.x
@@ -1911,11 +1938,39 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: m_MovingTurnSpeed
-      value: 90
+      value: 360
       objectReference: {fileID: 0}
     - target: {fileID: 11469404, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
       propertyPath: m_StationaryTurnSpeed
-      value: 45
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_Name
+      value: PlayerController
+      objectReference: {fileID: 0}
+    - target: {fileID: 149790, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 469942, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 495908, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 448028, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 127968, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_TagString
+      value: PlayerModel
+      objectReference: {fileID: 0}
+    - target: {fileID: 152642, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
+      propertyPath: m_TagString
+      value: PlayerModel
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7737647c22c1fc64a88d5cd030c352ce, type: 2}
@@ -2022,11 +2077,11 @@ GameObject:
   - component: {fileID: 1997876351}
   - component: {fileID: 1997876350}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: PlayerCamera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!81 &1997876350
 AudioListener:
@@ -2083,10 +2138,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1997876349}
-  m_LocalRotation: {x: 0.040720396, y: -0.043812774, z: 0.0017872764, w: 0.998208}
-  m_LocalPosition: {x: 0, y: 1.61, z: -1.7000027}
-  m_LocalScale: {x: 1, y: 1.3939488, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.57, z: -1.65}
+  m_LocalScale: {x: 1, y: 1.3939492, z: 1}
   m_Children: []
   m_Father: {fileID: 292271047}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 4.6720004, y: 180, z: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
