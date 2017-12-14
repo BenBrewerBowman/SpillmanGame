@@ -264,6 +264,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4987584621032828}
+  - component: {fileID: 114066268963387182}
+  - component: {fileID: 195414248718614882}
   m_Layer: 0
   m_Name: Hover Car
   m_TagString: Untagged
@@ -2567,6 +2569,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4631212, y: 0.14464241, z: 0.15888262}
   m_Center: {x: 0, y: 0.5763136, z: 2.181364}
+--- !u!114 &114066268963387182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537722187790422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466c4ea4e8492dc4ca36fae8bcd89cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: []
 --- !u!146 &146017484948990370
 WheelCollider:
   m_ObjectHideFlags: 1
@@ -3147,3 +3161,24 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!195 &195414248718614882
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537722187790422}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 9
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
