@@ -8,7 +8,8 @@ namespace SpillmanGame {
         public enum GameMode
         {
             CAR,
-            PLAYER
+            PLAYER,
+            DEAD
         }
 
         private static GameManager instance = new GameManager();
@@ -29,10 +30,16 @@ namespace SpillmanGame {
             {
                 ActiveGameMode = GameMode.PLAYER;
             }
-            else
+            else if(ActiveGameMode == GameMode.PLAYER)
             {
                 ActiveGameMode = GameMode.CAR;
             }
+        }
+
+        public void TriggerDeath()
+        {
+            ActiveGameMode = GameMode.DEAD;
+            Debug.Log("You are dead!");
         }
     }
 }
