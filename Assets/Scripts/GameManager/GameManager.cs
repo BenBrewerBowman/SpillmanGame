@@ -2,35 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager {
+namespace SpillmanGame { 
+    public class GameManager {
 
-    public enum GameMode
-    {
-        CAR,
-        PLAYER
-    }
-
-    private static GameManager instance = new GameManager();
-    public GameMode gameMode { get; private set; }
-
-    private GameManager() {
-        gameMode = GameMode.PLAYER;
-    }
-
-    public GameManager GetInstance()
-    {
-        return instance;
-    }
-
-    public void ToggleGameMode()
-    {
-        if(gameMode == GameMode.CAR)
+        public enum GameMode
         {
-            gameMode = GameMode.PLAYER;
+            CAR,
+            PLAYER,
+            DEAD
         }
-        else
+
+        private static GameManager instance = new GameManager();
+        public GameMode ActiveGameMode { get; private set; }
+
+        private GameManager() {
+            ActiveGameMode = GameMode.CAR;
+        }
+
+        public static GameManager GetInstance()
         {
-            gameMode = GameMode.CAR;
+            return instance;
+        }
+
+        public void ToggleGameMode()
+        {
+            if(ActiveGameMode == GameMode.CAR)
+            {
+                ActiveGameMode = GameMode.PLAYER;
+            }
+            else if(ActiveGameMode == GameMode.PLAYER)
+            {
+                ActiveGameMode = GameMode.CAR;
+            }
+        }
+
+        public void TriggerDeath()
+        {
+            ActiveGameMode = GameMode.DEAD;
+            Debug.Log("You are dead!");
         }
     }
 }
