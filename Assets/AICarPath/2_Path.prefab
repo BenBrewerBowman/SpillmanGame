@@ -200,7 +200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4791568856754676}
   m_Layer: 0
-  m_Name: PredeterminedPath1
+  m_Name: 2_Path
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
