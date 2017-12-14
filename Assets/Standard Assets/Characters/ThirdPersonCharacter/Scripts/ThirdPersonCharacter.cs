@@ -42,6 +42,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
 			m_OrigGroundCheckDistance = m_GroundCheckDistance;
 		}
 
+        public void SetMoveSpeed(float moveSpeed)
+        {
+            this.m_MoveSpeedMultiplier = moveSpeed;
+        }
+
 
 		public void Move(Vector3 move, bool crouch, bool jump)
 		{

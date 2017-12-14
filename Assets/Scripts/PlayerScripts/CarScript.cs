@@ -1,10 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityStandardAssets.Characters.ThirdPerson;
 
 namespace SpillmanGame {
     public class CarScript : MonoBehaviour {
 
+        public float CurrentHealth;
+        public int MaxHealth = 100;
+
+        private Slider healthBar;
         private GameManager manager;
         private GameObject playerController;
         private GameObject[] playerModels;
@@ -12,10 +18,14 @@ namespace SpillmanGame {
 
         void Start()
         {
+            healthBar = GameObject.FindWithTag("CarHealthBar").GetComponent<Slider>();
+
             manager = GameManager.GetInstance();
             playerController = GameObject.FindWithTag("Player");
             playerModels = GameObject.FindGameObjectsWithTag("PlayerModel");
             ConfigurePlayerMode();
+            CurrentHealth = MaxHealth;
+            healthBar.value = MaxHealth;
         }
 
         // Update is called once per frame
@@ -34,7 +44,7 @@ namespace SpillmanGame {
 
         private void ConfigurePlayerMode()
         {
-            
+            ThirdPersonCharacter characterScript = playerController.GetComponent<ThirdPersonCharacter>();
             if (manager.ActiveGameMode == SpillmanGame.GameManager.GameMode.PLAYER)
             {
                 this.transform.parent = null;
@@ -44,8 +54,10 @@ namespace SpillmanGame {
                 {
                     obj.SetActive(true);
                 }
+                
+                characterScript.SetMoveSpeed(1f);
             }
-            else
+            else if(manager.ActiveGameMode == SpillmanGame.GameManager.GameMode.CAR)
             {
                 playerController.transform.forward = -this.transform.forward;
                 playerController.transform.position = this.transform.position;
@@ -56,7 +68,31 @@ namespace SpillmanGame {
                 {
                     obj.SetActive(false);
                 }
+                characterScript.SetMoveSpeed(2.5f);
             }
+            else if (manager.ActiveGameMode == SpillmanGame.GameManager.GameMode.DEAD)
+            {
+                characterScript.SetMoveSpeed(0);
+            }
+        }
+
+        public void HandleDamage(float damage)
+        {
+            CurrentHealth -= damage;
+            if (CurrentHealth <= 0)
+            {
+                healthBar.value = 0;
+                TriggerDeath();
+            }
+            else
+            {
+                healthBar.value = CurrentHealth / MaxHealth;
+            }
+        }
+
+        public void TriggerDeath()
+        {
+            manager.TriggerDeath();
         }
 
         private void OnCollisionEnter(Collision collisionInfo)
