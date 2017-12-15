@@ -116,7 +116,7 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             arm.transform.Rotate(-55f, 0, 0);
             forearm.transform.Rotate(-22f, 0, 0);
             skeleton.transform.LookAt(target.transform);
-            if(shootTime <= 10000)
+            if(shootTime <= 5000)
             {
                 shootTime += 1;
             }
@@ -124,6 +124,11 @@ namespace UnityStandardAssets.Characters.ThirdPerson
             {
                 shootTime = 0;
                 Fire();
+            }
+
+            if (Vector3.Distance(character.transform.position, target.transform.position) > 7)
+            {
+                state = basicAI.State.PATROL;
             }
             //shoulder.transform.Rotate(29.4f, 64.22601f, -173.519f);
         }
