@@ -571,6 +571,7 @@ GameObject:
   - component: {fileID: 4858781058535272}
   - component: {fileID: 114389545843449348}
   - component: {fileID: 195752057799753764}
+  - component: {fileID: 65522180482983910}
   m_Layer: 0
   m_Name: Red Car
   m_TagString: Untagged
@@ -2545,6 +2546,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4758265, y: 0.11984116, z: 0.12475991}
   m_Center: {x: 0, y: 0.60871065, z: 2.1265244}
+--- !u!65 &65522180482983910
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1829772557112080}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1.8774655}
+  m_Center: {x: -1.5101476e-11, y: 0, z: 0.4387343}
 --- !u!65 &65579875962147596
 BoxCollider:
   m_ObjectHideFlags: 1

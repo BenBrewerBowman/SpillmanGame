@@ -406,6 +406,7 @@ GameObject:
   - component: {fileID: 114632822817825032}
   - component: {fileID: 114292194795352462}
   - component: {fileID: 195242791763304016}
+  - component: {fileID: 65960425285902460}
   m_Layer: 0
   m_Name: Monster Truck
   m_TagString: Untagged
@@ -2570,6 +2571,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4758265, y: 0.11984116, z: 0.12475991}
   m_Center: {x: 0, y: 0.60871065, z: 2.1265244}
+--- !u!65 &65960425285902460
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1716681144809960}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114292194795352462
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3199,6 +3212,6 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0.5
+  m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4

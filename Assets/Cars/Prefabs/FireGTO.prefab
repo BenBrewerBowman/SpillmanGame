@@ -176,6 +176,7 @@ GameObject:
   - component: {fileID: 4000011716641564}
   - component: {fileID: 114064166800630390}
   - component: {fileID: 195073135025414214}
+  - component: {fileID: 65787635256999032}
   m_Layer: 0
   m_Name: FireGTO
   m_TagString: Untagged
@@ -2569,6 +2570,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4631212, y: 0.18964243, z: 0.16888261}
   m_Center: {x: 0, y: 0.5988136, z: 2.1863642}
+--- !u!65 &65787635256999032
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011417104946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &114064166800630390
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 4992179501731884}
   - component: {fileID: 114468550255828316}
   - component: {fileID: 195174060707991758}
+  - component: {fileID: 65348424031174018}
   m_Layer: 0
   m_Name: Ghost Car 1
   m_TagString: Untagged
@@ -2533,6 +2534,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4631212, y: 0.14464241, z: 0.15888262}
   m_Center: {x: 0, y: 0.5763136, z: 2.181364}
+--- !u!65 &65348424031174018
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1166424858694626}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65465492445575924
 BoxCollider:
   m_ObjectHideFlags: 1
