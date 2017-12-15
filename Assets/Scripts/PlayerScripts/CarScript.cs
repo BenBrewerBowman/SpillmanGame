@@ -132,7 +132,7 @@ namespace SpillmanGame {
                 Debug.Log("Trigger left.");
                 withinDoorRange = false;
             }
-            else
+            else if(manager.ActiveGameMode == GameManager.GameMode.CAR)
             { 
                 Patrol patrol = other.gameObject.GetComponent<Patrol>();
                 if (patrol != null)

@@ -931,10 +931,11 @@ GameObject:
   - component: {fileID: 135200710501937932}
   - component: {fileID: 195151529802239620}
   - component: {fileID: 114619880083296774}
-  - component: {fileID: 114262844467473364}
+  - component: {fileID: 114435422624303956}
+  - component: {fileID: 114930230684521238}
   m_Layer: 0
   m_Name: MichaelAIThirdPersonController
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1954,7 +1955,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1747666448888534}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 15.241409, y: 0.22045897, z: 371.12988}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4512244651647008}
@@ -2533,7 +2534,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: e8fc704a8ebe9824087bfbe66f144a07, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2650,7 +2651,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114262844467473364
+--- !u!114 &114435422624303956
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -2658,22 +2659,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 1747666448888534}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47fc87ef3d3197743819e2c07b181221, type: 3}
+  m_Script: {fileID: 11500000, guid: 4471cc2e85bdf3446b44539ac3836075, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 0}
   character: {fileID: 0}
   state: 0
-  bulletPrefab: {fileID: 1437127726417030, guid: 88dd5177b0cca544b9b0d3a686bd7c43,
+  bulletPrefab: {fileID: 1441318649394984, guid: c95cb70bd96013742bf2749bbe3b8b3f,
     type: 2}
   bulletSpawn: {fileID: 4893515600716426}
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  waypoints: []
   patrolSpeed: 0.5
-  chaseSpeed: 0.75
+  chaseSpeed: 1
   target: {fileID: 0}
 --- !u!114 &114619880083296774
 MonoBehaviour:
@@ -2694,6 +2691,20 @@ MonoBehaviour:
   m_MoveSpeedMultiplier: 1
   m_AnimSpeedMultiplier: 1
   m_GroundCheckDistance: 0.2
+--- !u!114 &114930230684521238
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1747666448888534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5af7e18f70ffa45b51fa682d368255, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ExplosionPrefab: {fileID: 1000010608846784, guid: 6747b1742d70743a8aff8594e708b2f7,
+    type: 2}
+  MaxHealth: 100
 --- !u!135 &135200710501937932
 SphereCollider:
   m_ObjectHideFlags: 1
