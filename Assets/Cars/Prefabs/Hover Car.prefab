@@ -264,6 +264,8 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4987584621032828}
+  - component: {fileID: 114066268963387182}
+  - component: {fileID: 195414248718614882}
   m_Layer: 0
   m_Name: Hover Car
   m_TagString: Untagged
@@ -883,7 +885,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1510117839800402}
-  m_LocalRotation: {x: 0, y: -0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0.359, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -895,7 +897,7 @@ Transform:
   - {fileID: 4895100467689568}
   m_Father: {fileID: 4987584621032828}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!4 &4418536019655580
 Transform:
   m_ObjectHideFlags: 1
@@ -1214,8 +1216,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1537722187790422}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.0468, y: 1.56, z: 325.38}
+  m_LocalRotation: {x: -0, y: 0.99995846, z: -0, w: -0.009119746}
+  m_LocalPosition: {x: 46.78087, y: 1.56, z: 326.41763}
   m_LocalScale: {x: 1.1448073, y: 1.1448072, z: 1.1448072}
   m_Children:
   - {fileID: 4408747955141840}
@@ -1227,7 +1229,7 @@ Transform:
   - {fileID: 4563304016028932}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 181.045, z: 0}
 --- !u!23 &23011824203214038
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -2567,6 +2569,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.4631212, y: 0.14464241, z: 0.15888262}
   m_Center: {x: 0, y: 0.5763136, z: 2.181364}
+--- !u!114 &114066268963387182
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537722187790422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 466c4ea4e8492dc4ca36fae8bcd89cfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!146 &146017484948990370
 WheelCollider:
   m_ObjectHideFlags: 1
@@ -3147,3 +3167,24 @@ WheelCollider:
     m_AsymptoteValue: 0.75
     m_Stiffness: 1
   m_Enabled: 1
+--- !u!195 &195414248718614882
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1537722187790422}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 9
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4

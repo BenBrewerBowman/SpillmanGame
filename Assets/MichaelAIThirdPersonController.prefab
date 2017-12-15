@@ -933,7 +933,7 @@ GameObject:
   - component: {fileID: 114619880083296774}
   - component: {fileID: 114262844467473364}
   m_Layer: 0
-  m_Name: AIThirdPersonController
+  m_Name: MichaelAIThirdPersonController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
