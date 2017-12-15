@@ -8,6 +8,10 @@ TagManager:
   - PoliceCar
   - PoliceCarController
   - PlayerModel
+  - HealthBar
+  - CarHealthBar
+  - Bullet
+  - Enemy
   layers:
   - Default
   - TransparentFX

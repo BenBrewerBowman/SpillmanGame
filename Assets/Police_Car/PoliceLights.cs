@@ -17,10 +17,13 @@ namespace SpillmanGame {
 	
 	    // Update is called once per frame
 	    void Update () {
-            if (Input.GetButtonDown("Fire1") && gameManager.ActiveGameMode == GameManager.GameMode.CAR)
+            if (gameManager.LightsOn)
             {
-                active = !active;
-                Debug.Log("Lights are :" + active);
+                active = true;
+            }
+            else
+            {
+                active = false;
             }
         }
 

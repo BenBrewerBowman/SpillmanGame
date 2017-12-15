@@ -14,6 +14,7 @@ namespace SpillmanGame {
 
         private static GameManager instance = new GameManager();
         public GameMode ActiveGameMode { get; private set; }
+        public bool LightsOn { get; set; }
 
         private GameManager() {
             ActiveGameMode = GameMode.CAR;

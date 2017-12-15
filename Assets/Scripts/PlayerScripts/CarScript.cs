@@ -40,6 +40,10 @@ namespace SpillmanGame {
                     ConfigurePlayerMode();
                 }
             }
+            if (Input.GetButtonDown("Fire1") && manager.ActiveGameMode == GameManager.GameMode.CAR)
+            {
+                manager.LightsOn = !manager.LightsOn;
+            }
         }
 
         private void ConfigurePlayerMode()
@@ -107,14 +111,47 @@ namespace SpillmanGame {
 
         private void OnTriggerEnter(Collider other)
         {
-            Debug.Log("Trigger entered.");
-            withinDoorRange = true;
+            if(other.gameObject.tag == "Player") {
+                Debug.Log("Trigger entered.");
+                withinDoorRange = true;
+            }
+            else if (manager.LightsOn)
+            {
+                Patrol patrol = other.gameObject.GetComponent<Patrol>();
+                if (patrol != null)
+                {
+                    patrol.Stopped = true;
+                }
+            }
         }
 
         private void OnTriggerExit(Collider other)
         {
-            Debug.Log("Trigger left.");
-            withinDoorRange = false;
+            if (other.gameObject.tag == "Player")
+            {
+                Debug.Log("Trigger left.");
+                withinDoorRange = false;
+            }
+            else
+            { 
+                Patrol patrol = other.gameObject.GetComponent<Patrol>();
+                if (patrol != null)
+                {
+                    patrol.Stopped = false;
+                }
+            }
+        }
+
+        private void OnTriggerStay(Collider other)
+        {
+            if (manager.LightsOn)
+            {
+                Patrol patrol = other.gameObject.GetComponent<Patrol>();
+                if (patrol != null && !patrol.Stopped)
+                {
+                    patrol.Stopped = true;
+                }
+            }
         }
     }
  }
