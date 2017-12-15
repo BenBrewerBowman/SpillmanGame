@@ -2665,7 +2665,7 @@ MonoBehaviour:
   agent: {fileID: 0}
   character: {fileID: 0}
   state: 0
-  bulletPrefab: {fileID: 1441318649394984, guid: c95cb70bd96013742bf2749bbe3b8b3f,
+  bulletPrefab: {fileID: 1350890516702342, guid: 31f9984b875e80143afc17e4adc7c8b3,
     type: 2}
   bulletSpawn: {fileID: 4893515600716426}
   waypoints: []
